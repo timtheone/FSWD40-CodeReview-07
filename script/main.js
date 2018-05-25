@@ -19,7 +19,6 @@ class Locations {
                 <p class="card-text">
                     Address: ${this.address} ${this.city} ${this.zipCode}<br>
                     Created at: ${formatedDate}
-                </p>
             </div>
         </div>
         `;
@@ -49,7 +48,7 @@ class Restaurants extends Locations {
                     Address: ${this.address}, ${this.city} ${this.zipCode}<br>
                     Telephone Number: ${this.telNumber}<br>
                     Cuisine: ${this.type}<br>
-                    Web site: ${this.webAddress}<br>
+                    Web site: <a href="${this.webAddress}">${this.webAddress}</a><br>
                     Created at: ${formatedDate}
                 </p>
             </div>
@@ -93,7 +92,7 @@ class Events extends Locations {
 ;
 let church = new Locations("Karlskirche", "Vienna", "Karlsplatz 1", 1010, "/images/church.jpg", new Date('2013-02-08 09:30'));
 let zoo = new Locations("Zoo", "Vienna", "Maxingstraße 13b", 1130, "/images/zoo.jpg", new Date('2011-11-20 10:00'));
-let lemon = new Restaurants("Lemon Leaf", "Vienna", "Kettenbrückengasse 19", 1050, "/images/lemonleaf.png", new Date('2003-05-10 12:00'), "+43(1)581230", "Thai", "www.lemonleaf.at");
+let lemon = new Restaurants("Lemon Leaf", "Vienna", "Kettenbrückengasse 19", 1050, "/images/lemonleaf.png", new Date('2003-05-10 12:00'), "+43(1)581230", "Thai", "http://www.lemonleaf.at");
 let sixta = new Restaurants("Sixta", "Vienna", "Schönbrunner Straße 21", 1050, "/images/sixta.png", new Date("2013-02-08 09:30"), "+43 1 58 528 56 | +43 1 58 528 56", "Viennese", "http://www.sixta-restaurant.at/");
 let kris = new Events("Kris Kristofferson", "Vienna", "Wiener Stadthalle, Halle F, Roland Rainer Platz 1", 1150, "/images/kris.jpeg", new Date("2008-11-17 19:30"), "Fr 15 Jun", "20:00", 58.50);
 let lenny = new Events("Lenny Kravitz", "Vienna", "Wiener Stadthalle, Halle D, Roland Rainer Platz 1", 1150, "/images/lenny.jpg", new Date("2018-02-18 03:27"), "Sat, 09.06.2018 ", "19:30", 47.80);
